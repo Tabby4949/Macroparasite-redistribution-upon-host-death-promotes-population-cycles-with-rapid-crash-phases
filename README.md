@@ -10,7 +10,7 @@ The Python code folder contains the following Python files:
   - The implementation to find the first endemic steady state in a given parameter space to start the sweep for the bifurcation analysis. It was found that starting the sweep from an existing endemic steady state (regardless of stability) was more reliable than starting from a coordinate which was parasite-free; while it was possible to successfully sweep from a parasite-free steady state, it was inconsistent and could result in neighbouring coordinates falling back to the trivial parasite-free state instead of converging to the endemic state.
 - Analysis.py: There are two analysis methods present in this file:
   - bifurcation_analysis: This performs a two-parameter bifurcation analysis across the (x,y) grid for each specified value of r by iterating through the parameter space, attempting to find the endemic steady state via analytical guesses, neighbouring cached states or an ODE integration before using Jacobians and eigenvalues to determine stability.
-  - vary_Hopf_analysis: Here, the Hopf bifurcation curve is extracted for values of r=0 and r=1 in a (x,y) parameter space when you vary a parameter z.
+  - vary_Hopf_analysis: Here, the Hopf bifurcation curve is extracted for values of r=0 and r=1 in a (x,y) parameter space when a third parameter z is varied.
 - Plots.py: This contains all the plotting code that shows the results obtained from the analysis.
 - Main.py: Within this file is the specific code for Figures 1, 2(a), 2(b), 2(c), S1, S2 and S3, which the user can choose to obtain.
 
