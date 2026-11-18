@@ -1,0 +1,1 @@
+# Macroparasite-redistribution-upon-host-death-promotes-population-cycles-with-rapid-crash-phases
