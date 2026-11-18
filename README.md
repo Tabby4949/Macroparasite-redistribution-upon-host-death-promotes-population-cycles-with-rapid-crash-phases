@@ -18,7 +18,7 @@ The MATLAB code folder contains the simulations for Figures 4 and 5.
 
 No datasets were used; all data were simulated.
 
-The code was written by the author, with some assistance from AI to correct major errors.
+The code was written by the author CJT, with some assistance from AI to correct major errors.
 
 [1] https://www.jstor.org/stable/3934
 
