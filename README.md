@@ -16,6 +16,10 @@ The Python code folder contains the following Python files:
 
 The MATLAB code folder contains the simulations for Figures 4 and 5.
 
-[1] https://www.jstor.org/stable/3933
+No datasets were used; all data were simulated.
 
-[2] https://www.jstor.org/stable/5339?origin=crossref&seq=1
+The code was written by the author, with some assistance from AI to correct major errors.
+
+[1] https://www.jstor.org/stable/3934
+
+[2] https://www.jstor.org/stable/5339
