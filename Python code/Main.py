@@ -25,7 +25,7 @@ r_vals = [0, 1]
 params = (d, beta, psi, sigma, b, nu, xi, alpha, h, delta, lamb, r)
 
 x, y = "alpha", "h"           
-n = 50                   
+n = 500                   
 
 x_vals = np.linspace(0, 2e-3, n)
 y_vals = np.linspace(0, 100, n)
