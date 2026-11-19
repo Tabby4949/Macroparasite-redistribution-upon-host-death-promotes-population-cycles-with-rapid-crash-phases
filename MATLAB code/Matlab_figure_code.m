@@ -15,7 +15,7 @@ par.alpha  = 5e-4;
 par.lambda = 40;
 
 tspan = [0 4000];
-opts = odeset('RelTol', 1e-5,'AbsTol', 1e-8,'NonNegative', [1, 2, 3, 4],'NormControl', 'on','MaxOrder', 2);
+opts = odeset('RelTol', 1e-5,'AbsTol', 1e-8, 'NormControl', 'on','MaxOrder', 2);
 
 % Simulation: r = 0
 
@@ -64,6 +64,8 @@ xlim([3700 3915]);
 ylabel('H(t)', 'FontSize', 20);
 grid off;
 
+legend([hH0, hH1], {'r = 0', 'r = 1'}, 'Orientation', 'horizontal', 'Location', 'northeast', 'FontSize', 16);
+
 nexttile
 
 hP1 = plot(t1, x1 .* H1, '-', 'LineWidth', 4, 'Color', [0 0 1]); hold on
@@ -73,8 +75,6 @@ set(gca, 'FontSize', fSize);
 xlim([3700 3915]);
 ylabel('P(t)', 'FontSize', 20);
 grid off;
-
-legend([hP0, hP1], {'r = 0', 'r = 1'}, 'Orientation', 'horizontal', 'Location', 'northeast', 'FontSize', 16);
 
 nexttile
 
@@ -122,7 +122,7 @@ par.alpha  = 5e-4;
 par.lambda = 40;
 
 tspan = [0 30];
-opts = odeset('RelTol', 1e-5,'AbsTol', 1e-8,'NonNegative', [1, 2, 3, 4],'NormControl', 'on','MaxOrder', 2);
+opts = odeset('RelTol', 1e-5,'AbsTol', 1e-8, 'NormControl', 'on','MaxOrder', 2);
 
 % Simulation: r = 0
 
@@ -168,6 +168,8 @@ xlim([19 23]);
 ylabel('H(t)', 'FontSize', 20);
 grid off;
 
+legend([hH0, hH1], {'r = 0', 'r = 1'}, 'Orientation', 'horizontal', 'Location', 'northeast', 'FontSize', 16);
+
 nexttile
 
 hP1 = plot(t1, x1 .* H1, '-', 'LineWidth', 4, 'Color', [0 0 1]); hold on
@@ -177,8 +179,6 @@ set(gca, 'FontSize', fSize);
 xlim([19 23]);
 ylabel('P(t)', 'FontSize', 20);
 grid off;
-
-legend([hP0, hP1], {'r = 0', 'r = 1'}, 'Orientation', 'horizontal', 'Location', 'northeast', 'FontSize', 16);
 
 nexttile
 
