@@ -14,7 +14,7 @@ The Python code folder contains the following Python files:
 - Plots.py: This contains all the plotting code that shows the results obtained from the analysis.
 - Main.py: Within this file is the specific code for Figures 1, 2(a), 2(b), 2(c), S1, S2 and S3, which the user can choose to obtain.
 
-The MATLAB code folder contains the simulations for Figures 4 and 5.
+The MATLAB code folder contains the simulations for Figures 4 and 5. The system of ODEs was integrated using ode23s, which employs a second-order linearly implicit Rosenbrock method designed for stiff systems.
 
 No datasets were used; all data were simulated.
 
