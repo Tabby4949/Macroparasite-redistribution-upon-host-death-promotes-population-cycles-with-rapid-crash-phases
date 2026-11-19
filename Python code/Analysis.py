@@ -96,7 +96,10 @@ def bifurcation_analysis(model, x, y, x_vals, y_vals, r_vals, params):
             # Try analytical endemic equilibrium
             # ==================================
 
-            initial = prep.initial_state(model, params_update, num_zero_value)
+            try:
+                initial = prep.initial_state(model, params_update, num_zero_value)
+            except (ValueError, RuntimeError, FloatingPointError):
+                initial = None
 
             if initial is not None:
                 equilibrium = Model.Equilibrium(model, params_update, initial, num_zero_value)
@@ -148,8 +151,6 @@ def bifurcation_analysis(model, x, y, x_vals, y_vals, r_vals, params):
                     
                     equilibrium = Model.Equilibrium(model, params_update, initial_guess, num_zero_value)
 
-                        equilibrium = None
-
                     if equilibrium is None:
                         continue
 
@@ -171,8 +172,10 @@ def bifurcation_analysis(model, x, y, x_vals, y_vals, r_vals, params):
             # ============================================
 
             if equilibrium is None:
-                
-                initial = prep.initial_state(model, params_update, num_zero_value)
+                try:
+                    initial = prep.initial_state(model, params_update, num_zero_value)
+                except (ValueError, RuntimeError, FloatingPointError):
+                    initial = None
 
                 if initial is not None:
                     solution = solve_ivp(model, (0, 100), initial, args=(params_update,), rtol=1e-6, atol=1e-8, max_step=0.1)
@@ -426,8 +429,15 @@ def vary_Hopf_analysis(model, x, y, x_vals, y_vals, z_vals, params):
                 # Try the analytical endemic equilibrium
                 # ======================================
 
-                initial = prep.initial_state(model, params_update, num_zero_value)
-                equilibrium = Model.Equilibrium(model, params_update, initial, num_zero_value)
+                try:
+                    initial = prep.initial_state(model, params_update, num_zero_value)
+                except (ValueError, RuntimeError, FloatingPointError):
+                    initial = None
+
+                if initial is not None:
+                    equilibrium = Model.Equilibrium(model, params_update, initial, num_zero_value)
+                else:
+                    equilibrium = None
 
                 if equilibrium is not None:
                     equilibrium = np.asarray(equilibrium, dtype=float)
@@ -489,11 +499,16 @@ def vary_Hopf_analysis(model, x, y, x_vals, y_vals, z_vals, params):
                 # =====================================================
 
                 if equilibrium is None:
-                    initial = prep.initial_state(model, params_update, num_zero_value)
-                    solution = solve_ivp(model, (0, 100), initial, args=(params_update,), rtol=1e-6, atol=1e-8, max_step=0.1)
+                    try:
+                        initial = prep.initial_state(model, params_update, num_zero_value)
+                    except (ValueError, RuntimeError, FloatingPointError):
+                        initial = None
 
-                    if solution.success:
-                        equilibrium = Model.Equilibrium(model, params_update, initial_guess=solution.y[:, -1], num_zero=num_zero_value)
+                    if initial is not None:
+                        solution = solve_ivp(model, (0, 100), initial, args=(params_update,), rtol=1e-6, atol=1e-8, max_step=0.1)
+
+                        if solution.success:
+                            equilibrium = Model.Equilibrium(model, params_update, initial_guess=solution.y[:, -1], num_zero=num_zero_value)
 
                         if equilibrium is not None:
                             equilibrium = np.asarray(equilibrium, dtype=float)
