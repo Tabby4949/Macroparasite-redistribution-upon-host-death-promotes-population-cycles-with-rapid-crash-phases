@@ -135,7 +135,7 @@ colours = ["green", "blue", "magenta"]
 plot.vary_Hopf_plot(x, y, x_vals, y_vals, z_vals, results_2c, colours, label_pos, r_plot=None)    # use r_plot=0 or r_plot=1 to view the two cases seperately
 
 
-#%% Appendix: Figure S1
+#%% Appendix: Figure A1
 
 model = Model.Redist_4D
 
@@ -169,7 +169,7 @@ label_y_pos = 2850
 plot.boundary_plot(x, y, x_vals, y_vals, r_vals, results_S1, label_x_pos, label_y_pos)
 
 
-#%% Appendix: Figure S2
+#%% Appendix: Figure A2
 
 model = Model.Redist_4D
 
@@ -201,7 +201,7 @@ label_pos = {0: 0.95, 40: 0.8, 200: 0.55, 500: 0.5}
 colours = ["orange", "blue", "magenta", "green"]
 plot.vary_Hopf_plot(x, y, x_vals, y_vals, z_vals, results_S2, colours, label_pos, r_plot=None)       # use r_plot=0 or r_plot=1 to view the two cases seperately
 
-#%% Appendix: Figure S3
+#%% Appendix: Figure A3
 
 model = Model.Redist_3D
 
