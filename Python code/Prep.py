@@ -1,7 +1,6 @@
 import numpy as np
 import Models as Model
 from scipy.optimize import brentq
-from scipy.integrate import solve_ivp
 
 # ======================================================================
 # Identify the parameters being updated and return the new parameter set
