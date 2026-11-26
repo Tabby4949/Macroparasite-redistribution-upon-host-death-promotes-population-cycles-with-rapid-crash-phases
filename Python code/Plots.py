@@ -409,7 +409,7 @@ def vary_Hopf_plot(x, y, x_vals, y_vals, z_vals, results, colours, label_pos, r_
 
     if x_exponent not in [-1, 0, 1, 2]:
         ax.text(0.5, -0.08, x_string, transform=ax.transAxes, ha="right", va="top", fontsize=28)
-        ax.text(0.5, -0.08, rf"$(\times 10^{{{x_exponent}}})$", transform=ax.transAxes, ha="left", va="top", fontsize=19)
+        ax.text(0.5, -0.085, rf"$(\times 10^{{{x_exponent}}})$", transform=ax.transAxes, ha="left", va="top", fontsize=19)
         
     else:
         ax.text(0.5, -0.08, x_string, transform=ax.transAxes, ha="center", va="top", fontsize=28)

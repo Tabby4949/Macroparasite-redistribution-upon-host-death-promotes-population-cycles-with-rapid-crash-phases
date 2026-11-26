@@ -64,7 +64,7 @@ x_vals = np.linspace(0, 2e-3, n)
 y_vals = np.linspace(0, 100, n)
 
 results_2a = analysis.bifurcation_analysis(model, x, y, x_vals, y_vals, r_vals, params)
-
+#%%
 r_label_pos = {0.00: 0.5, 0.25: 0.6, 0.50: 0.7, 0.75: 0.7, 1.00: 0.9}
 plot.plot_Hopf_comparison(x, y, x_vals, y_vals, r_vals, results_2a, r_label_pos)
 
@@ -162,11 +162,11 @@ n = 600
 x_vals = np.linspace(0, 2e-3, n)
 y_vals = np.linspace(0, 3000, n)
 
-results_S1 = analysis.bifurcation_analysis(model, x, y, x_vals, y_vals, r_vals, params)
+results_A1 = analysis.bifurcation_analysis(model, x, y, x_vals, y_vals, r_vals, params)
 
 label_x_pos = 1.9e-3
 label_y_pos = 2850
-plot.boundary_plot(x, y, x_vals, y_vals, r_vals, results_S1, label_x_pos, label_y_pos)
+plot.boundary_plot(x, y, x_vals, y_vals, r_vals, results_A1, label_x_pos, label_y_pos)
 
 
 #%% Appendix: Figure A2
@@ -195,11 +195,11 @@ x_vals = np.linspace(0, 5e-3, n)
 y_vals = np.linspace(0, 200, n)
 
 z_vals = {"lamb": [0, 40, 200, 500]}
-results_S2 = analysis.vary_Hopf_analysis(model, x, y, x_vals, y_vals, z_vals, params)
+results_A2 = analysis.vary_Hopf_analysis(model, x, y, x_vals, y_vals, z_vals, params)
 
 label_pos = {0: 0.95, 40: 0.8, 200: 0.55, 500: 0.5}
 colours = ["orange", "blue", "magenta", "green"]
-plot.vary_Hopf_plot(x, y, x_vals, y_vals, z_vals, results_S2, colours, label_pos, r_plot=None)       # use r_plot=0 or r_plot=1 to view the two cases seperately
+plot.vary_Hopf_plot(x, y, x_vals, y_vals, z_vals, results_A2, colours, label_pos, r_plot=None)       # use r_plot=0 or r_plot=1 to view the two cases seperately
 
 #%% Appendix: Figure A3
 
@@ -228,9 +228,9 @@ n = 500
 x_vals = np.linspace(0, 1.5e-4, n)
 y_vals = np.linspace(0, 100, n)
 
-results_S3 = analysis.bifurcation_analysis(model, x, y, x_vals, y_vals, r_vals, params)
+results_A3 = analysis.bifurcation_analysis(model, x, y, x_vals, y_vals, r_vals, params)
 
 label_x_pos = 3.5e-5
 label_y_pos = 95
-plot.boundary_plot(x, y, x_vals, y_vals, r_vals, results_S3, label_x_pos, label_y_pos)
+plot.boundary_plot(x, y, x_vals, y_vals, r_vals, results_A3, label_x_pos, label_y_pos)
 
