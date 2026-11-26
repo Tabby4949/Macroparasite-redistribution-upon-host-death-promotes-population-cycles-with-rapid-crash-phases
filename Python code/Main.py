@@ -64,7 +64,7 @@ x_vals = np.linspace(0, 2e-3, n)
 y_vals = np.linspace(0, 100, n)
 
 results_2a = analysis.bifurcation_analysis(model, x, y, x_vals, y_vals, r_vals, params)
-#%%
+
 r_label_pos = {0.00: 0.5, 0.25: 0.6, 0.50: 0.7, 0.75: 0.7, 1.00: 0.9}
 plot.plot_Hopf_comparison(x, y, x_vals, y_vals, r_vals, results_2a, r_label_pos)
 
