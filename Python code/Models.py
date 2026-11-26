@@ -3,7 +3,7 @@ import jax.numpy as jnp
 from scipy.optimize import fsolve
 
 # ====================================================
-# Equations S1-S3 model from supplementary information
+# Equations A1-A3 model from supplementary information
 # ====================================================
 
 def Redist_3D(t, state, parameters):
